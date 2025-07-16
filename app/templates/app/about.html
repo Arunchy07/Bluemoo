@@ -1,0 +1,90 @@
+{% extends 'app/base.html' %} {% load static %}
+<!---->
+{% block title %}About{% endblock title %}
+<!-- maincontact Block-->
+
+{% block banner-slider %}
+<div id="carouselExample" class="carousel slide">
+  <div class="carousel-inner">
+    <div class="carousel-item active" style="height: 610px">
+      <img
+        src="{% static 'app/images/banner/B2.jpg' %}"
+        class="d-block w-100 h-100"
+        alt="banner images"
+      />
+    </div>
+    <div class="carousel-item" style="height: 610px">
+      <img
+        src="{% static 'app/images/banner/B1.jpg' %}"
+        class="d-block w-100"
+        alt="banner images"
+      />
+    </div>
+    <div class="carousel-item" style="height: 610px">
+      <img
+        src="{% static 'app/images/banner/B3.jpg' %}"
+        class="d-block w-100"
+        alt="banner images"
+      />
+    </div>
+    <div class="carousel-item" style="height: 610px">
+      <img
+        src="{% static 'app/images/banner/B4.png' %}"
+        class="d-block w-100"
+        alt="banner images"
+      />
+    </div>
+    
+    </div>
+  </div>
+  <button
+    class="carousel-control-prev"
+    type="button"
+    data-bs-target="#carouselExample"
+    data-bs-slide="prev"
+  >
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button
+    class="carousel-control-next"
+    type="button"
+    data-bs-target="#carouselExample"
+    data-bs-slide="next"
+  >
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+
+{% endblock banner-slider %}
+
+{% block main-content %}
+     <div class="container mt-3">
+      <br>
+      <h2 class="text-center">About Us</h2>
+      <br>
+      <div class="row container">
+        <p class="fs-4 text-center">
+          
+         <h1 class="text-center"> Welcome to BlueMOO, where purity meets tradition!</h1>
+
+At BlueMOO, we’re more than just a dairy brand — we’re a promise of freshness, nutrition, and trust. Born from the vision to bring high-quality, farm-fresh dairy products straight to your home, BlueMOO combines the goodness of nature with the safety of modern practices.
+<br><br>
+<h2>🌿 Our Mission</h2>
+To deliver natural, nutritious, and hygienic dairy products that enrich everyday lives while supporting sustainable and ethical dairy farming.
+<br><br>
+<h2>🥛 What We Offer </h2>
+From creamy milk to rich curd, from ghee to paneer, every BlueMOO product is crafted to ensure:
+<br><br>
+✅ Purity without preservatives or additives
+<br>
+✅ Freshness with minimal processing
+<br>
+✅ Honest Pricing that values both farmers and families
+        </p>
+      </div>
+    </div>
+    <br><br><br>
+{% endblock main-content %}
+

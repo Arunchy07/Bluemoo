@@ -1,0 +1,10 @@
+{% extends 'app/base.html' %} {% load static %}
+  <!---->
+{% block sucess %}
+  <div class="container py-5 text-center">
+    <h2 class="text-success">Thank You, {{ name }}!</h2>
+    <p>Your message has been sent successfully. We'll get back to you shortly.</p>
+    <a href="/" class="btn btn-outline-primary mt-3">Back to Home</a>
+  </div>
+
+{% endblock sucess %}

@@ -1,0 +1,49 @@
+{% extends 'app/base.html' %}
+{% load static %}
+
+{% block title %}Category{% endblock title %}
+
+{% block main-content %}
+<div class="container my-5">
+  <div class="row">
+    <!-- Sidebar -->
+    <div class="col-md-3 mb-4">
+      <div class="list-group">
+        {% for val in title %}
+          <a href="{% url 'category-title' val.title %}" class="list-group-item list-group-item-action">
+            {{ val.title }}
+          </a>
+        {% endfor %}
+      </div>
+    </div>
+
+    <!-- Products Grid -->
+    <div class="col-md-9">
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4">
+        {% for prod in product %}
+        <div class="col">
+          <div class="card h-100 text-center">
+            <a href="{% url 'product-detail' prod.id %}" class="text-decoration-none text-dark">
+              <img src="{{ prod.product_image.url }}" class="card-img-top" alt="{{ prod.title }}" style="height: 200px; object-fit: cover;">
+              <div class="card-body">
+                <h5 class="card-title">{{ prod.title }}</h5>
+                <p class="card-text text-danger fw-bold">
+                  Rs.{{ prod.discounted_price }}/-
+                  <small class="text-muted text-decoration-line-through">
+                    Rs.{{ prod.selling_price }}
+                  </small>
+                </p>
+              </div>
+            </a>
+          </div>
+        </div>
+        {% empty %}
+        <div class="col-12">
+          <p class="text-center text-muted">No products found in this category.</p>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock main-content %}
